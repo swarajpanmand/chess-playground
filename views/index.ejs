@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, minmax(0, 1fr));
+            grid-template-rows: repeat(8, minmax(0, 1fr));
+            width: 500px;
+            height: 500px;
+            transform: rotate(0deg);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 10px solid #4a3728;
+            border-radius: 4px;
+        }
+
+        .piece.white {
+            color: #e8e8e8;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .piece.black {
+            color: #222;
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+        }
+
+        .flipped {
+            transform: rotate(180deg);
+        }
+
+        .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .square.light {
+            background-color: #f0d9b5;
+        }
+
+        .square.dark {
+            background-color: #b58863;
+        }
+
+        .square:hover {
+            opacity: 0.8;
+        }
+
+        .piece {
+            font-size: 48px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .piece.draggable {
+            cursor: grab;
+        }
+
+        .piece:hover {
+            transform: scale(1.1);
+        }
+
+        .dragging {
+            opacity: 0.5;
+        }
+
+        /* Rotate pieces for black player */
+        .flipped .piece {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-800 to-gray-900">
+    <div class="w-full h-screen flex items-center justify-center">
+        <div class="chessboard"></div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="/javascripts/chessgame.js"></script>
+</body>
+</html>
