@@ -3,7 +3,8 @@
 # Chess Game
 
 A real-time multiplayer chess game built with Express, Socket.io, and Chess.js.
- Players can connect, play chess in real-time, and watch as spectators if both player slots are filled.
+ Players can connect, play chess in real-time,
+ and watch as spectators if both player slots are filled.
 
 
 
