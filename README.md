@@ -28,8 +28,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/chess-game.git
-   cd chess-game
+   git clone https://github.com/swarajpanmand/chess-playground
+   cd chess-playground
    ```
 
 2. Install dependencies:
