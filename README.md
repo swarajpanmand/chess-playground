@@ -1,5 +1,4 @@
 
-```markdown
 # Chess Game
 
 A real-time multiplayer chess game built with Express, Socket.io, and Chess.js.
